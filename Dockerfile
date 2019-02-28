@@ -6,7 +6,7 @@ ADD supervisord.conf /etc/supervisord.conf
 ADD start.sh /start.sh
 
 RUN apk --update add supervisor \
-    && bash \
+    bash \
     && chmod +x /start.sh
 
 CMD ["/start.sh"]
