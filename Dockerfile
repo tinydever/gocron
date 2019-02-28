@@ -2,7 +2,7 @@ FROM ouqg/gocron
 
 USER root
 
-RUN apk --update add supervisor \
+RUN apk --update add supervisor bash
 
 ADD supervisord.conf /etc/supervisord.conf
 ADD start.sh /start.sh
